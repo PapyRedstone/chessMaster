@@ -1,8 +1,1 @@
-#ifndef
-#define
-
-class Piece{
-
-};
-
-#endif
+#include "Piece.hpp"

@@ -2,17 +2,13 @@ CXX=g++
 CXXFLAGS=-W -Wall -std=c++17 -pedantic
 LDXXFLAGS=
 EXEC=a.out
-SRC= $(wildcart *.cpp)
+SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 
-all: $(EXEC) 
+all: $(EXEC) push
 
 a.out: $(OBJ)
 	$(CXX) $^ -o $@ $(LDXXFLAGS)
-
-main.cpp : Piece.hpp
-
-Piece.cpp : Piece.hpp
 
 %.o: %.cpp
 	$(CXX) -c $< $(CXXFLAGS)
