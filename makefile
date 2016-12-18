@@ -20,7 +20,7 @@ push : commit
 	git push
 
 commit : add
-	git commit -m "auto"
+	git commit -m "auto add to github"
 
 add : 
 	git add -A
