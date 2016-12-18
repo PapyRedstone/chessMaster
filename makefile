@@ -1,17 +1,21 @@
 CXX=g++
-CXXFLAGS=-W -Wall -ansi -pedantic
+CXXFLAGS=-W -Wall -std=c++17 -pedantic
 LDXXFLAGS=
 EXEC=a.out
-SRC= $(wildcart *.c)
-OBJ= $(SRC:.c=.o)
+SRC= $(wildcart *.cpp)
+OBJ= $(SRC:.cpp=.o)
 
-all: $(EXEC) push
+all: $(EXEC) 
 
 a.out: $(OBJ)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	$(CXX) $^ -o $@ $(LDXXFLAGS)
 
-%.o: %.c
-	$(CC) -o $@ -c $< $(CFLAGS)
+main.cpp : Piece.hpp
+
+Piece.cpp : Piece.hpp
+
+%.o: %.cpp
+	$(CXX) -c $< $(CXXFLAGS)
 
 clean:
 	rm -rf *.o *.out *.gch
