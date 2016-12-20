@@ -14,6 +14,11 @@ class Board{
 public:
 	Board();
 	~Board();
+
+	std::shared_ptr<Piece> getPiece(int x, int y){
+		return mBoard[x][y].mPiece;
+	}
+
 private:
 	std::array<std::array<Case,8>,8> mBoard;
 };
