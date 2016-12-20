@@ -1,20 +1,20 @@
 CXX=g++
 CXXFLAGS=-W -Wall -std=c++17 -pedantic
 LDXXFLAGS=
-EXEC=a.out
+EXEC=a.exe
 SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 
 all: $(EXEC) push
 
-a.out: $(OBJ)
+a.exe: $(OBJ)
 	$(CXX) $^ -o $@ $(LDXXFLAGS)
 
 %.o: %.cpp
 	$(CXX) -c $< $(CXXFLAGS)
 
 clean:
-	rm -rf *.o *.out *.gch
+	rm -rf *.o *.exe *.gch
 
 push : commit
 	git push
