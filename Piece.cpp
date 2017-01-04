@@ -1,8 +1,8 @@
 #include "Piece.hpp"
 
 Piece::Piece(PieceType t,Color c):
-	mType{t},
-	mColor{c}
+	mColor{c},
+	mType{t}
 {}
 
 Piece::~Piece()
