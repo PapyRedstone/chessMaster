@@ -20,11 +20,12 @@ enum PieceType{
 
 class Piece{
 public:
-	Piece();
+	Piece(PieceType t,Color c);
 	~Piece();
 	
 private:
-
+	Color mColor;
+	PieceType mType;
 };
 
 #endif
