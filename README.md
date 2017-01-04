@@ -1,2 +1,2 @@
 # chessMaster
-ceci est un fichier inutile
+Ceci est un fichier inutile
