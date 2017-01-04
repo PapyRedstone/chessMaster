@@ -7,3 +7,4 @@ Piece::Piece(PieceType t,Color c):
 
 Piece::~Piece()
 {}
+
